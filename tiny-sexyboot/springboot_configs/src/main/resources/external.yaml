@@ -1,0 +1,14 @@
+map:
+  entries:
+    tradeType:
+      P: B
+      S: S
+    securityCode:
+      ICI: ICICI Bank
+      BOB: Bank of Baroda
+      BOA: Bank of America
+      BOS: Bank of Singapore
+  list:
+    - element A
+    - element B
+    - element C

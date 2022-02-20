@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  listener:
+    simple:
+      # 测试retry，对应RabbitProperties.ListenerRetry
+      retry:
+        enabled: true
+        max-attempts: 3
+        initial-interval: 3000

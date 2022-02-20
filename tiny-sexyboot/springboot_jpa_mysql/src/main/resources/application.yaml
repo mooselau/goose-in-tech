@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: dev
+
+# Logging
+logging:
+  level:
+    root: INFO
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true # allowPublicKeyRetrieval=true only used in dev/QA
+    username: admin
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect # MySQL8Dialect by default uses InnoDB engine in MySql8, but Mysql5 still use MySQL5InnoDBDialect
+    show-sql: true
+    # DON'T use below in production! Manually maintenance(sql & review & patch) is the right way.
+    hibernate:
+      ddl-auto: create-drop

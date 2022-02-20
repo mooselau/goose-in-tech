@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.crazygoose</groupId>
+    <artifactId>tiny-sexyboot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.1.RELEASE</version>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+    </properties>
+
+    <modules>
+        <!-- module>grpc_api</module>
+        <module>grpc_client</module>
+        <module>grpc_server</module -->
+        <module>springboot</module>
+        <module>springboot_aop</module>
+        <module>springboot_configs</module>
+        <module>springboot_logs</module>
+        <module>springboot_jpa_h2</module>
+        <module>springboot_jpa_mysql</module>
+        <module>springboot_mq</module>
+        <module>springboot_redis</module>
+    </modules>
+
+    <dependencies>
+        <!--  Lombok  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
