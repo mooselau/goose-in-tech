@@ -27,16 +27,6 @@ public class FibonacciSequence {
      * For you to write
      */
     public void way1(int index) {
-//        if (index == 0 || index == 1) {
-//            return index;
-//        } else {
-//            int a = way1(index - 2);
-//            int b = way1(index - 1);
-//            if (a >= Integer.MAX_VALUE || b >= Integer.MAX_VALUE) {
-//                throw new IllegalArgumentException("stack overflow found!");
-//            }
-//            return a + b;
-//        }
     }
 
     /*

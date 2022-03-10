@@ -1,8 +1,8 @@
 package corejava;
 
-public class LnkedListTester {
+public class LinkedListTester {
 	
-	static LnkedListTester llt = new LnkedListTester();
+	static LinkedListTester llt = new LinkedListTester();
 	static Node head = llt.new Node(0);
 	static Node tail = head;
 	

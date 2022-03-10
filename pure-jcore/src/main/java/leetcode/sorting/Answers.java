@@ -185,12 +185,16 @@ public class Answers {
 		// otherwise
 		int x = 0;
 		int y = 0;
+		// loop for counting z
 		for (int z = 0; z < c.length; z++) {
+			// normal compare
 			if (x < lena && y < lenb) {
 				c[z] = (a[x] > b[y]) ? b[y++] : a[x++];
 			} else if (x >= lena) {
+				// in case A ends
 				c[z] = b[y++];
 			} else {
+				// in case B ends
 				c[z] = a[x++];
 			}
 		}

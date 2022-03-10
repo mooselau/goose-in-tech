@@ -38,7 +38,7 @@ public class TwoSum {
 	 * This is standard solution to this problem
 	 */
 	public int[] standardWay(int[] array, int target) {
-		return Answers.reverseInteger(array, target);
+		return Answers.twoSum(array, target);
 	}
 
 	private static void p(String msg) {

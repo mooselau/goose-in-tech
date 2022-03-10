@@ -115,7 +115,7 @@ public class Answers {
 	/**
 	 * Time: O(n), Space: more memory is needed for HashMap.
 	 */
-	public static int[] reverseInteger(int[] nums, int target) {
+	public static int[] twoSum(int[] nums, int target) {
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < nums.length; i++) {
 			int complement = target - nums[i];
@@ -134,8 +134,8 @@ public class Answers {
 		int rev = 0;
 		
 		/* rest and pop might be negative during the processing.
-		 * It is not recommended to convert rest to "positive", 
-		 * as ANY maniputation might cause overflow;
+		 * It is not recommended convert rest to "positive",
+		 * as ANY manipulation might cause overflow;
 		 * e.g. if x = MIN_Value; rest = x * -1; then rest is still Min_Value, as it overflows. 
 		 * */
 		int rest = x;

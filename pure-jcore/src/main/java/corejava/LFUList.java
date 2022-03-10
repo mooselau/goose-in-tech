@@ -14,7 +14,7 @@ public class LFUList {
     }
 
     public void hit(String element) {
-        print("\n===> before input " + element);
+        // print("\n===> before input " + element);
         String hitted = null;
         for (String key : map.keySet()) {
             if (key == element) {
