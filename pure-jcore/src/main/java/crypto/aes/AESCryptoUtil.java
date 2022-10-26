@@ -11,13 +11,13 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
-import java.util.Base64;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
+import com.sun.org.apache.xerces.internal.impl.dv.util.HexBin;
 
 
 /**
@@ -57,14 +57,16 @@ public class AESCryptoUtil {
         // adding iv, salt
         byte[] finalCipherBytes = ByteBuffer.allocate(cipherText.length + iv.length + salt.getBytes().length)
                 .put(iv).put(salt.getBytes()).put(cipherText).array();
-        return Base64.getEncoder().encodeToString(finalCipherBytes);
+        return HexBin.encode(finalCipherBytes);
+        // return Base64.getEncoder().encodeToString(finalCipherBytes);
     }
 
     public String decrypt(String encryptedMessage, String password) throws InvalidAlgorithmParameterException,
             InvalidKeyException, InvalidKeySpecException, NoSuchAlgorithmException, BadPaddingException,
             IllegalBlockSizeException {
         // prepare parameters
-        byte[] decoded = Base64.getDecoder().decode(encryptedMessage);
+        // byte[] decoded = Base64.getDecoder().decode(encryptedMessage);
+        byte[] decoded = HexBin.decode(encryptedMessage);
         ByteBuffer bb = ByteBuffer.wrap(decoded);
         // getting iv, salt from bytes
         byte[] iv = new byte[IV_LENGTH];

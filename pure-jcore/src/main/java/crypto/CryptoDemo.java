@@ -16,7 +16,7 @@ import crypto.rsa.RSACryptoUtil;
 public class CryptoDemo {
 
     public CryptoDemo() throws NoSuchAlgorithmException, NoSuchPaddingException {
-        rsaCryptoUtil = new RSACryptoUtil();
+        // rsaCryptoUtil = new RSACryptoUtil();
         aesCryptoUtil = new AESCryptoUtil();
         sha256DigestUtil = new SHA256DigestUtil();
     }
@@ -28,9 +28,9 @@ public class CryptoDemo {
 
     private void entrypoint() {
         // doRSA();
-        // doAES();
+        doAES();
         // doSign();
-        doSignWithSignature();
+        // doSignWithSignature();
     }
 
     private void doSignWithSignature() {
@@ -76,7 +76,7 @@ public class CryptoDemo {
     private AESCryptoUtil aesCryptoUtil;
 
     private void doAES() {
-        String message = "See you Space, Cowboy!";
+        String message = "123456789012";
         String keyphrase = "password02";
         try {
             String encrypted = aesCryptoUtil.encrypt(message, keyphrase);

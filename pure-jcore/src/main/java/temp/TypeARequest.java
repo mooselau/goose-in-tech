@@ -9,4 +9,9 @@ import lombok.Setter;
 public class TypeARequest extends AbstractRequest {
     private Integer type = 1;
     private String name = "typeA";
+
+    public TypeARequest() {
+        System.out.println("initing TypeARequest..");
+    }
+
 }

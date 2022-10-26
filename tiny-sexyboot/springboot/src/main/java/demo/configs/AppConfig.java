@@ -1,18 +1,20 @@
 package demo.configs;
 
-import org.springframework.context.annotation.Bean;
+import javax.annotation.PostConstruct;
 import org.springframework.context.annotation.Configuration;
-import demo.pojo.User;
+import lombok.extern.slf4j.Slf4j;
 
 
+@Slf4j
 @Configuration
 public class AppConfig {
-    @Bean(name = "user")
-    public User initUser() {
-        User user = new User();
-        user.setId(1L);
-        user.setUserName("user_name_1");
-        user.setNote("note_1");
-        return user;
+
+    public AppConfig() {
+        LOGGER.info("=> constructor");
+    }
+
+    @PostConstruct
+    public void chushi() {
+        LOGGER.info("=> chushihua");
     }
 }
